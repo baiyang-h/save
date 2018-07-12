@@ -1,9 +1,9 @@
 - [开始](#开始)
     - [使用Object.assign定义多个方法](#使用Object.assign定义多个方法)
-    - [采用表达式写属性名](#采用表达式写属性名)
+    - [采用表达式写属性名](#采用表达式写属性名)
 - [constructor](#constructor)
 - [类的实例对象](#类的实例对象)
-- [Class表达式](#class表达式)
+- [Class表达式](#class表达式)
 - [不存在变量提升](#不存在变量提升)
 - [私有方法和私有属性](#私有方法和私有属性)
 - [this的指向](#this的指向)
@@ -17,7 +17,7 @@
 
 类`class`不存在提升的问题， 函数和变量存在提升问题
 ### 开始
-传统方法
+传统方法
 ```js
 function Point(x, y) {
   this.x = x;
@@ -44,10 +44,10 @@ class Point {
 }
 var p = new Point(1, 2);
 ```
-- `constructor`就是构造方法，es6的类中称做构造函数，就是对应ES5中的构造函数。
+- `constructor`就是构造方法，es6的类中称做构造函数，就是对应ES5中的构造函数。
 - `toString()`方法对应ES5中`Point.prototype.toString`原型中定义的方法。在类上面定义的方法实际上就是在原型对象上定义。
 - `typeof(Point) === 'function'`，类的数据类型就是函数。
-- `Point === Point.prototype.constructor`，类本身就指向构造函数。构造函数的`prototype`属性在类上依旧存在。
+- `Point === Point.prototype.constructor`，类本身就指向构造函数。构造函数的`prototype`属性在类上依旧存在。
 - 类的内部所有定义的方法，都是不可枚举的。但在ES5中是可以被枚举的。
 - 类必须使用new调用，否则会报错。
 
@@ -66,7 +66,7 @@ Object.assign(Point.prototype, {
 });
 ```
 
-##### 采用表达式写属性名
+##### 采用表达式写属性名
 ```js
 let methodName = 'getArea';
 
@@ -128,7 +128,7 @@ p1.__proto__ === p2.__proto__   //true
 p1.__proto__.printName = function () { return 'Oops' };
 ```
 
-### Class表达式
+### Class表达式
 与函数一样，类也可以使用表达式的形式定义。
 ```js
 const MyClass = class Me {

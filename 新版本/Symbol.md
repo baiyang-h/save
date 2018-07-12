@@ -24,7 +24,7 @@ typeof s
 
 注意，`Symbol`函数前不能使用`new`命令，否则会报错。这是因为生成的 `Symbol` 是一个原始类型的值，不是对象。也就是说，由于 `Symbol` 值不是对象，所以不能添加属性。基本上，它是一种类似于字符串的数据类型。
 
-##### Symbol传入参数
+##### Symbol传入参数
 `Symbol`函数可以接受一个**字符串作为参数**，表示对 `Symbol` 实例的描述，主要是为了在控制台显示，或者转为字符串时，比较容易区分。
 ```js
 let s1 = Symbol('foo');
@@ -216,7 +216,7 @@ Object.getOwnPropertySymbols(obj)
 ```
 使用`Object.getOwnPropertyNames`方法得不到`Symbol`属性名，需要使用`Object.getOwnPropertySymbols`方法。
 
-不过有一个新的 API，`Reflect.ownKeys`方法可以返回所有类型的键名，包括常规键名和 `Symbol` 键名。
+不过有一个新的 API，`Reflect.ownKeys`方法可以返回所有类型的键名，包括常规键名和 `Symbol` 键名。
 ```js
 let obj = {
   [Symbol('my_key')]: 1,
@@ -265,6 +265,6 @@ Symbol.keyFor(s2) // undefined  s2属于未登记的 Symbol 值
 [查阅阮老师的es6文档](http://es6.ruanyifeng.com/#docs/symbol#内置的-Symbol-值)
 
 <br/>
-参考文档
+参考文档
 
 [阮老师的Symbol](http://es6.ruanyifeng.com/#docs/symbol)
