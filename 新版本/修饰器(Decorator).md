@@ -131,7 +131,7 @@ math.add(2, 4);
 例子2，修饰器里传递参数
 ```js
 class Math {
-  @log(q, w)
+  @log(1, 2)
   add(a, b) {
     return a + b;
   }
