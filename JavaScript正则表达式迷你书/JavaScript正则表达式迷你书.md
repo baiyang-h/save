@@ -394,7 +394,7 @@ console.log( string.match(regex) );
 var regex = /(\d)+ \1/;
 console.log( regex.test("12345 1") );
 // => false
-console.log( regex.test("12345 5") );js
+console.log( regex.test("12345 5") );
 // => true
 ```
 
